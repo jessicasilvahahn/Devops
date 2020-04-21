@@ -2,7 +2,7 @@ FROM debian
 MAINTAINER Jessica Hahn
 RUN apt -y update && \
     apt -y upgrade && \
-    apt -y install wget git build-essential vim && \
+    apt -y install wget git build-essential vim libsqlite3-dev && \
     mkdir -p /opt/li-asterisk/libs && \
     cd /tmp && \
     git clone https://github.com/jessicasilvahahn/Devops.git && \
@@ -32,5 +32,5 @@ RUN apt -y update && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install /opt/li-asterisk/libs/scapy-2.4.2.tar.gz && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install /opt/li-asterisk/libs/asyncio-3.4.3.tar.gz && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install urllib3 && \
-    /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install requests
-    
+    /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install requests && \
+    /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install python-daemon
