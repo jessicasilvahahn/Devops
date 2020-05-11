@@ -11,6 +11,8 @@ function start() {
 	-v ${PATH}/etc-asterisk/http.conf:/etc/asterisk/http.conf:rw \
 	-v ${PATH}/etc-asterisk/ari.conf:/etc/asterisk/ari.conf:rw \
 	-v ${PATH}/etc-asterisk/manager.conf:/etc/asterisk/manager.conf:rw \
+    	-v ${PATH}/etc-asterisk/cdr_manager.conf:/etc/asterisk/cdr_manager.conf:rw \
+	-v ${PATH}/etc-asterisk/cdr.conf:/etc/asterisk/cdr.conf:rw \
 	-v /var/run/asterisk:/var/run/asterisk:rw \
 	-v /home/jessica/Documentos/asterisk:/home/Documentos/asterisk:rw \
 	jessicahahn/asterisk-16 asterisk -f
