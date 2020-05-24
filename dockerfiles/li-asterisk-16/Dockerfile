@@ -2,7 +2,7 @@ FROM debian
 MAINTAINER Jessica Hahn
 RUN apt -y update && \
     apt -y upgrade && \
-    apt -y install wget git build-essential vim libsqlite3-dev && \
+    apt -y install wget git build-essential vim libsqlite3-dev tcpdump && \
     mkdir -p /opt/li-asterisk/libs && \
     cd /tmp && \
     git clone https://github.com/jessicasilvahahn/Devops.git && \
