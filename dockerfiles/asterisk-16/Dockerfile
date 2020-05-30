@@ -11,14 +11,13 @@ RUN apt -y update && \
     cd Devops/tools && \
     tar -zxf asterisk-16-current.tar.gz && \
     cd asterisk-16.*/ && \
-    apt -y install libedit-dev uuid-dev libsqlite3-dev && \
+    apt -y install libedit-dev uuid-dev libsqlite3-devwget git build-essential vim libsqlite3-dev tcpdump && \
     ./configure && \
     make && \
     make install && \
     make samples && \
     make config && \
-    make install-logrotate \
-    apt -y install wget git build-essential vim libsqlite3-dev tcpdump && \
+    make install-logrotate && \
     mkdir -p /opt/li-asterisk/libs && \
     cd /tmp && \
     cd Devops/libs && \
