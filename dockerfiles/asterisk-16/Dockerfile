@@ -21,7 +21,6 @@ RUN apt -y update && \
     apt -y install wget git build-essential vim libsqlite3-dev tcpdump && \
     mkdir -p /opt/li-asterisk/libs && \
     cd /tmp && \
-    git clone https://github.com/jessicasilvahahn/Devops.git && \
     cd Devops/libs && \
     tar -xzvf zlib-1.2.11.tar.gz && \
     cd zlib-1.2.11 && \
