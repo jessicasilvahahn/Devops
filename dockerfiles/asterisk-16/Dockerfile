@@ -49,4 +49,3 @@ RUN apt -y update && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install requests && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install python-daemon
 
-RUN mkdir -p /var/spool/asterisk/pcap
