@@ -28,9 +28,11 @@ RUN apt -y update && \
     cp /tmp/Devops/libs/panoramisk-1.2.tar.gz /opt/li-asterisk/libs/ && \
     cp /tmp/Devops/libs/scapy-2.4.2.tar.gz /opt/li-asterisk/libs/ && \
     cp /tmp/Devops/libs/asyncio-3.4.3.tar.gz /opt/li-asterisk/libs/ && \
+    cp /tmp/Devops/libs/paramiko-2.7.1.tar.gz /opt/li-asterisk/libs/ && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install /opt/li-asterisk/libs/panoramisk-1.2.tar.gz && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install /opt/li-asterisk/libs/scapy-2.4.2.tar.gz && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install /opt/li-asterisk/libs/asyncio-3.4.3.tar.gz && \
+    /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install /opt/li-asterisk/libs/paramiko-2.7.1.tar.gz && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install urllib3 && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install requests && \
     /opt/li-asterisk/tools/Python-3.6.7/bin/pip3 install python-daemon
