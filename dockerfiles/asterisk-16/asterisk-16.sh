@@ -2,6 +2,8 @@
 
 COMMAND=$1
 PATH=$2
+CONTAINER=$3
+MODULE=$4
 
 function start() {
    /usr/bin/docker run -d --rm --name=asterisk-16-pbx --net=host \
@@ -15,7 +17,7 @@ function start() {
 	-v ${PATH}/etc-asterisk/cdr.conf:/etc/asterisk/cdr.conf:rw \
 	-v /var/run/asterisk:/var/run/asterisk:rw \
 	-v /home/jessica/Documentos/asterisk:/home/Documentos/asterisk:rw \
-        -v /home/jessica/modulo/LI_telefonia_IP/:/opt/li:rw \
+        -v ${MODULE}:${CONTAINER}:rw \
 	jessicahahn/asterisk-16 asterisk -f
 
 }
