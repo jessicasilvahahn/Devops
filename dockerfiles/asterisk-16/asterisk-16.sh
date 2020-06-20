@@ -18,6 +18,7 @@ function start() {
 	-v /var/run/asterisk:/var/run/asterisk:rw \
 	-v /home/jessica/Documentos/asterisk:/home/Documentos/asterisk:rw \
         -v ${MODULE}:${CONTAINER}:rw \
+	-v /etc/localtime:/etc/localtime:ro \
 	jessicahahn/asterisk-16 asterisk -f
 
 }
